@@ -1125,7 +1125,7 @@ class BoltChecker:
         if not self.webhook_id:
             return
         payload = {
-            "username": "BoltFN",
+            "username": "F2",
             "avatar_url": "https://fortnite-api.com/images/cosmetics/br/character_quickburst_plains/icon.png",
             "embeds": [{
                 "title": display_name,
@@ -1141,7 +1141,7 @@ class BoltChecker:
                     {"name": "Exclusive Skins", "value": str(exclusives)},
                     {"name": "Account Type", "value": fullAccess}
                 ],
-                "footer": {"text": "BoltFN"}
+                "footer": {"text": "F2"}
             }]
         }
         try:
@@ -1237,7 +1237,7 @@ class App(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("BoltFN - Fortnite Account Checker")
+        self.title("F2 - Account Checker")
         self.geometry("900x720")
         self.minsize(800, 600)
         ctk.set_appearance_mode("dark")
@@ -1254,8 +1254,7 @@ class App(ctk.CTk):
         splash_frame = ctk.CTkFrame(self.splash, corner_radius=20)
         splash_frame.pack(expand=True, fill="both", padx=30, pady=30)
 
-        ctk.CTkLabel(splash_frame, text="🍟♤ ｃ𝓐𝐓 🐟🎁", font=("Segoe UI", 28, "bold"), text_color="#00ccff").pack(pady=(10,5))
-        ctk.CTkLabel(splash_frame, text="BoltFN GUI", font=("Segoe UI", 16), text_color="white").pack(pady=(0,10))
+        ctk.CTkLabel(splash_frame, text="F2 Checker", font=("Segoe UI", 28, "bold"), text_color="#00ccff").pack(pady=(10,5))
         self.progress_splash = ctk.CTkProgressBar(splash_frame, width=250, height=15, corner_radius=10)
         self.progress_splash.pack(pady=10)
         self.progress_splash.set(0)
@@ -1325,7 +1324,7 @@ class App(ctk.CTk):
         title_frame = ctk.CTkFrame(self, corner_radius=15, border_width=2, border_color="#00ccff")
         title_frame.grid(row=0, column=0, padx=20, pady=(20,10), sticky="ew")
         title_frame.grid_columnconfigure(0, weight=1)
-        ctk.CTkLabel(title_frame, text="🍟♤ ｃ𝓐𝐓 🐟🎁  BoltFN", font=("Segoe UI", 24, "bold"), text_color="#00ccff").grid(row=0, column=0, pady=10)
+        ctk.CTkLabel(title_frame, text="F2 Checker", font=("Segoe UI", 24, "bold"), text_color="#00ccff").grid(row=0, column=0, pady=10)
 
         # Main content
         content_frame = ctk.CTkFrame(self, corner_radius=10, fg_color="transparent")
@@ -1438,7 +1437,7 @@ class App(ctk.CTk):
                                  fg_color="#4488ff", hover_color="#66aaff", command=self.save_config)
         save_btn.grid(row=0, column=2, padx=10)
 
-        self.log("Welcome to BoltFN GUI!")
+        self.log("Welcome to F2 Premium!")
         self.log("Place combo files in 'combos/' and proxies in 'proxies/'.")
         self.log("Configure settings and click Start.")
 
@@ -1477,7 +1476,7 @@ class App(ctk.CTk):
     def update_progress_gui(self, value: float, desc: str):
         self.progress_bar.set(value / 100)
         if desc:
-            self.title(f"BoltFN - {desc}")
+            self.title(f"F2 - {desc}")
 
     def start_check(self):
         self.start_btn.configure(state="disabled")
